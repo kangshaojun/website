@@ -1,0 +1,5 @@
+<footer class="fixed h-16 bg-gray-900 w-full right-0 left-0 bottom-0 flex items-center justify-center">
+  <p class="text-gray-300">
+    {{ with .Site.Copyright }}{{ replace . "{year}" now.Year | safeHTML }}{{ end }}
+  </p>
+</footer>

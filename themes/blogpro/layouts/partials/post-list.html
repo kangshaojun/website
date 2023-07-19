@@ -1,0 +1,27 @@
+<div class="flex flex-col rounded-2xl pb-10">
+{{ range where .Paginator.Pages "Section" "ne" "" }}
+<article class="flex flex-col bg-gray-100 p-5 rounded-2xl mb-5">
+  <a href='{{ .Permalink }}'><h1 class="title">{{ .LinkTitle }}</h1></a>
+  <span class="mb-5">
+  {{ .Date.Format "2006-01-02" }}
+  {{ if .Params.tags }}
+     , posted under
+     {{range .Params.tags}}
+        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+     {{end}}
+  {{end}}
+  </span>
+  {{ if .Params.featuredImage  }}
+  <a href="{{ .Permalink}}"><img class="flex w-full" src="{{.Params.featuredimage }}" /></a>
+  {{ end }}
+  <span class="mt-5 mb-5">{{ .Description | markdownify }}</span>
+  <a href='{{ .Permalink }}' class="read-more">
+      {{ if .Site.Params.readMore }}
+          {{.Site.Params.readMore}}
+      {{ else }}
+          Read Up
+      {{ end }}
+  </a>
+</article>
+{{ end }}
+</div>

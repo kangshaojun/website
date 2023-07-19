@@ -1,0 +1,70 @@
+baseURL = "https://www.kangshaojun.com/"
+languageCode = "en-US"
+title = "亢少军"
+description = "资深开发者，创业者。专注于视频通讯技术领域。国内首本Flutter著作《Flutter技术入门与实战》作者,另著有《Dart语言实战》及《WebRTC音视频开发》等书籍。多年从事视频会议、远程教育等技术研发，对于Android、iOS以及跨平台开发技术有比较深入的研究和应用，作为主要程序员开发了多个应用项目，涉及医疗、交通、银行等领域。"
+config = "config.toml"
+tags = ["blog", "sidebar", "SEO"]
+theme = "blogpro"
+# Disable comments by leaving disqusShortname empty
+disqusShortname = "www-kangshaojun-com"
+copyright = "<a style='color:white' href='https://beian.miit.gov.cn/'>鄂ICP备16012198号-3</a> © 2019 站长统计 "
+canonifyURLS = true
+paginate = 10
+
+[params]
+	author = "亢少军"
+  bio = "Flutter Dart React ReactNaitve Android iOS Golang WebRTC."
+	logo = "/images/logo.png"
+	avatar = "/images/site-logo.png"
+	opengraphImage = "/images/logo.png"
+	enableRSS = true
+	customCSS = false
+  readMore = "查看更多"
+
+  #联系方式
+	github   = "http://github.com/kangshaojun/"
+  slack = "https://join.slack.com/t/kangshaojun/shared_invite/zt-riffsdox-jDe6AWhisMMeSC5Hx2bNMQ"
+	facebook  = ""
+  youtube = "https://www.youtube.com/channel/UCRFjV30272wRoWMTM4eLBuA"
+  bilibili  = "https://space.bilibili.com/394612055"
+
+
+    # Widget
+    widgets = true
+
+    # Author box and Share button
+    authorCard = true
+    shareButton = true
+    newsLetter = true
+
+    # Code highlighting with highlight.js
+    #highlightJS = true
+
+# Taxonomies
+[taxonomies]
+    tag = "tags"
+    category = "categories"
+
+#code highlight
+ pygmentsUseClasses=false
+ pygmentsStyle = "native"
+enableInlineShortcodes = true
+pygmentsCodeFences = true
+# enableInlineShortcodes = true
+# Code highlight configuration
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    style = "native"
+    tabWidth = 5

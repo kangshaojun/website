@@ -1,0 +1,40 @@
+<nav class="bg-gray-900 z-40 fixed left-0 right-0">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex justify-between">
+
+      <div class="flex space-x-4">
+        <!-- logo -->
+        <div>
+          <a href="#" class="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900">
+            <img src="{{ .Site.Params.Logo }}" alt="{{ .Site.Params.Title }}" />
+          </a>
+        </div>
+      </div>
+
+      <!-- secondary nav -->
+      <div class="hidden md:flex items-center space-x-1">
+        <a class="py-5 px-3 text-gray-300 hover:text-gray-200" href='{{ .Site.BaseURL }}'>文章</a>
+        <a class="py-5 px-3 text-gray-300 hover:text-gray-200" href='/posts/courses/'>核心课程</a>
+        <a class="py-5 px-3 text-gray-300 hover:text-gray-200" href='https://github.com/kangshaojun/'>图书源码</a>
+        <a class="py-5 px-3 text-gray-300 hover:text-gray-200" href='/posts/about/'>关于作者</a>
+      </div>
+
+      <!-- mobile button goes here -->
+      <div class="md:hidden flex items-center">
+        <button class="mobile-menu-button">
+          <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- mobile menu -->
+  <div class="mobile-menu hidden md:hidden">
+    <a href="{{ .Site.BaseURL }}" class="block py-2 px-4 text-gray-200 text-sm hover:bg-gray-200">文章</a>
+    <a class="py-5 px-3 text-gray-300 hover:text-gray-200" href='/posts/courses/'>核心课程</a>
+    <a href="https://github.com/kangshaojun/" class="block py-2 px-4 text-gray-200 text-sm hover:bg-gray-200">图书源码</a>
+    <a href="/posts/about/" class="block py-2 px-4 text-gray-200 text-sm hover:bg-gray-200">关于作者</a>
+  </div>
+</nav>

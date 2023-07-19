@@ -1,0 +1,20 @@
+{{ define "main" }}
+<article class="flex flex-col bg-gray-100 p-5 rounded-2xl">
+    <h1>{{ .Title }}</h1>
+  <section class="extras">
+      <span class="tags">
+        <small class="time">{{ .Date.Format "January 2, 2006" }}</small>
+        {{ if .Params.tags }}
+           , posted under
+           {{range .Params.tags}}
+              <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+           {{end}}
+        {{end}}
+      </span>
+  </section>
+  <section id="content" class="body">
+      {{ .Content }}
+  </section>
+</article>
+{{ partial "author.html" . }}
+{{end}}
