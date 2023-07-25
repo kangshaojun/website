@@ -20,6 +20,11 @@ arch -x86_64 pod update Moya // 更新moya
 arch -x86_64 pod cache clean --all
 ```
 
+### 创建一个pod库
+```bash
+arch -x86_64 pod lib create YourLibraryName
+```
+
 ## 自动打包
 自动打包可以使用fastlane这个工具
 ```bash
